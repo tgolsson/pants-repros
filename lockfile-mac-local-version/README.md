@@ -9,9 +9,7 @@ The (potential) bug is the following:
 Running `pants generate-lockfiles' will generate an invalid set of dependencies unless explicitly disallowing local versions. This is the expected set:
 
 ``` shellsession
-$ cat locks/valid.lock | \
-    grep -v "^\s*//" | \
-	jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
+$ cat locks/valid.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
 [
   {
     "algorithm": "sha256",
@@ -53,9 +51,7 @@ $ cat locks/valid.lock | \
 
 This is the actual set:
 ``` shellsession
-$ cat locks/broken.lock | \
-    grep -v "^\s*//" | \
-	jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
+$ cat locks/broken.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
 [
   {
     "algorithm": "sha256",
@@ -68,9 +64,7 @@ $ cat locks/broken.lock | \
 At the same time, we want to be able to select GPU and CPU variants, which are working as expected:
 
 ``` shellsession
-$ cat locks/gpu.lock | \
-    grep -v "^\s*//" | \
-	jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
+$ cat locks/gpu.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
 [
   {
     "algorithm": "sha256",
@@ -81,9 +75,7 @@ $ cat locks/gpu.lock | \
 ```
 
 ``` shellsession
-$ cat locks/cpu.lock | \
-    grep -v "^\s*//" | \
-	jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
+$ cat locks/cpu.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
 [
   {
     "algorithm": "sha256",
