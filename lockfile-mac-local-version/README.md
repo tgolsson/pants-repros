@@ -49,7 +49,8 @@ $ cat locks/valid.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requi
 ]
 ```
 
-This is the actual set:
+This is the actual set. Note that when not requesting a local tag we've been given cu115, but as that doesn't exist on Mac the lock is invalid.
+
 ``` shellsession
 $ cat locks/broken.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
 [
@@ -61,7 +62,7 @@ $ cat locks/broken.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requ
 ]
 ```
 
-At the same time, we want to be able to select GPU and CPU variants, which are working as expected:
+At the same time, we want to be able to select GPU and CPU variants, which are working as expected (and we're fine with them not working on Mac).
 
 ``` shellsession
 $ cat locks/gpu.lock | grep -v "^\s*//" | jq '.locked_resolves[0].locked_requirements[0] | select(.project_name == "torch") | .artifacts'
