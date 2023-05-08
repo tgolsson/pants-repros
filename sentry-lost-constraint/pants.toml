@@ -1,0 +1,24 @@
+[GLOBAL]
+pants_version = "2.15.0"
+
+backend_packages = [
+   "pants.backend.python",
+]
+
+[python]
+tailor_pex_binary_targets = true
+interpreter_constraints = ["==3.9.*"]
+enable_resolves = true
+default_resolve = "base"
+
+[python.resolves]
+base = "locks/base.lock"
+
+[pex-cli]
+version = "v2.1.129"
+known_versions = [
+  "v2.1.129|macos_arm64|717388fdf97eb6dad98fbe651debddfd05630aa6ce80557b8430efa9490fb7ec|4082068",
+  "v2.1.129|macos_x86_64|717388fdf97eb6dad98fbe651debddfd05630aa6ce80557b8430efa9490fb7ec|4082068",
+  "v2.1.129|linux_x86_64|717388fdf97eb6dad98fbe651debddfd05630aa6ce80557b8430efa9490fb7ec|4082068",
+  "v2.1.129|linux_arm64|717388fdf97eb6dad98fbe651debddfd05630aa6ce80557b8430efa9490fb7ec|4082068"
+]
