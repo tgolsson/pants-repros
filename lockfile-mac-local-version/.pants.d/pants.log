@@ -1,0 +1,47 @@
+09:52:55.89 [INFO] handling request: `--python-repos-find-links=-['file:///home/ts/.cache/nce/6621291ed4120fa45607b367abf7786ce496f389f27240712a63c31f1c438c21/bindings/find_links/2.15.0/214abc14/index.html'] generate-lockfiles ::`
+09:52:56.43 [INFO] request completed: `--python-repos-find-links=-['file:///home/ts/.cache/nce/6621291ed4120fa45607b367abf7786ce496f389f27240712a63c31f1c438c21/bindings/find_links/2.15.0/214abc14/index.html'] generate-lockfiles ::`
+09:53:02.88 [INFO] notify invalidation: cleared 1 and dirtied 20 nodes for: {"", ".#BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 1 and dirtied 15 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 1 and dirtied 20 nodes for: {"", "BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"", "BUILD"}
+09:53:14.44 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"", ".#BUILD"}
+09:53:16.76 [INFO] handling request: `--python-repos-find-links=-['file:///home/ts/.cache/nce/6621291ed4120fa45607b367abf7786ce496f389f27240712a63c31f1c438c21/bindings/find_links/2.15.0/214abc14/index.html'] generate-lockfiles ::`
+09:54:16.61 [INFO] Extending leases
+09:54:16.86 [INFO] Done extending leases
+09:54:24.94 [INFO] notify invalidation: cleared 1 and dirtied 39 nodes for: {"locks", "locks/broken.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/broken.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks", "locks/broken.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/gpu.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/gpu.lock", "locks"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/valid.lock", "locks"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/valid.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks", "locks/valid.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/cpu.lock"}
+09:54:24.94 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks", "locks/cpu.lock"}
+09:54:24.97 [INFO] request completed: `--python-repos-find-links=-['file:///home/ts/.cache/nce/6621291ed4120fa45607b367abf7786ce496f389f27240712a63c31f1c438c21/bindings/find_links/2.15.0/214abc14/index.html'] generate-lockfiles ::`
+09:54:46.21 [INFO] notify invalidation: cleared 1 and dirtied 60 nodes for: {"", ".#README.md"}
+09:55:36.86 [INFO] Extending leases
+09:55:36.87 [INFO] Done extending leases
+09:56:56.87 [INFO] Extending leases
+09:56:56.88 [INFO] Done extending leases
+09:58:16.88 [INFO] Extending leases
+09:58:16.89 [INFO] Done extending leases
+09:59:36.89 [INFO] Extending leases
+09:59:36.90 [INFO] Done extending leases
+10:00:56.90 [INFO] Extending leases
+10:00:56.90 [INFO] Done extending leases
+10:02:16.91 [INFO] Extending leases
+10:02:16.91 [INFO] Done extending leases
+10:03:36.92 [INFO] Extending leases
+10:03:36.92 [INFO] Done extending leases
+10:04:56.93 [INFO] Extending leases
+10:04:56.94 [INFO] Done extending leases
+10:05:08.50 [INFO] notify invalidation: cleared 1 and dirtied 60 nodes for: {"", "README.md"}
+10:05:08.50 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"README.md"}
+10:05:08.50 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"", "README.md"}
+10:05:08.50 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {".#README.md", ""}

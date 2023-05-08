@@ -1,0 +1,12 @@
+09:48:22.54 [33m[WARN][0m Please either set `enabled = true` in the [anonymous-telemetry] section of pants.toml to enable sending anonymous stats to the Pants project to aid development, or set `enabled = false` to disable it. No telemetry sent for this run. An explicit setting will get rid of this message. See https://www.pantsbuild.org/v2.15/docs/anonymous-telemetry for details.
+09:48:22.55 [33m[WARN][0m Unmatched glob from locks:cpu's `sources` field: "locks/cpu.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:22.55 [33m[WARN][0m Unmatched glob from locks:reqs's `sources` field: "locks/pants.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:22.55 [33m[WARN][0m Unmatched glob from locks:gpu's `sources` field: "locks/gpu.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:25.74 [INFO] Canceled: Generate lockfile for gpu
+09:48:25.74 [INFO] Canceled: Generate lockfile for reqs

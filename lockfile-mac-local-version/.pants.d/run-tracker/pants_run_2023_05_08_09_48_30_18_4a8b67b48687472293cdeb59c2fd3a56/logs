@@ -1,0 +1,24 @@
+09:48:30.04 [33m[WARN][0m Unmatched glob from locks:gpu's `sources` field: "locks/gpu.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:30.04 [33m[WARN][0m Unmatched glob from locks:cpu's `sources` field: "locks/cpu.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:30.04 [33m[WARN][0m Unmatched glob from locks:reqs's `sources` field: "locks/pants.lock"
+
+Do the file(s) exist? If so, check if the file(s) are in your `.gitignore` or the global `pants_ignore` option, which may result in Pants not being able to see the file(s) even though they exist on disk. Refer to https://www.pantsbuild.org/v2.15/docs/troubleshooting#pants-cannot-find-a-file-in-your-project.
+09:48:38.29 [INFO] Completed: Generate lockfile for reqs
+09:48:39.86 [INFO] Completed: Generate lockfile for cpu
+09:49:27.63 [INFO] Completed: Generate lockfile for gpu
+09:49:27.64 [INFO] notify invalidation: cleared 1 and dirtied 31 nodes for: {"locks/gpu.lock", "locks"}
+09:49:27.64 [INFO] Wrote lockfile for the resolve `reqs` to locks/pants.lock
+09:49:27.64 [INFO] Wrote lockfile for the resolve `cpu` to locks/cpu.lock
+09:49:27.64 [INFO] Wrote lockfile for the resolve `gpu` to locks/gpu.lock
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/gpu.lock"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/gpu.lock", "locks"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/pants.lock", "locks"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/pants.lock"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/pants.lock", "locks"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/cpu.lock", "locks"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks/cpu.lock"}
+09:49:27.64 [INFO] notify invalidation: cleared 0 and dirtied 0 nodes for: {"locks", "locks/cpu.lock"}
