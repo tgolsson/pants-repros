@@ -1,0 +1,42 @@
+[GLOBAL]
+pants_version = "2.17.0rc4"
+
+backend_packages = [
+   "pants.backend.python",
+
+   "pants.backend.experimental.python",
+   "pants.backend.codegen.protobuf.python",
+]
+
+
+[source]
+root_patterns = [
+   "cmd",
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[python]
+interpreter_constraints = [">=3.9.*,<3.10"]
+enable_resolves = true
+default_resolve = "base"
+pip_version = "23.0.1"
+
+[python-infer]
+use_rust_parser = false
+
+[python.resolves]
+base = "locks/base.lock"
+
+[python-repos]
+indexes = [
+    "https://pypi.org/simple/",
+]
+
+[repl]
+shell = "ipython"
+
+
+[ipython]
+install_from_resolve = "ipython"
