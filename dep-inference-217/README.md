@@ -5,7 +5,9 @@ This is a reproduction of an issue discovered with Pants 2.17.0rc4 where depende
 To reproduce,
 
 ``` shell
+$ # this can run
 $ PANTS_VERSION=2.16.0 pants --no-verify-config test cmd::
+$ # this fails to import torch
 $ pants test cmd::
 
 ```
