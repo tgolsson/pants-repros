@@ -1,0 +1,20 @@
+[GLOBAL]
+pants_version = "2.18.0"
+
+backend_packages = [
+    "pants.backend.python",
+]
+
+
+[python]
+interpreter_constraints = [">=3.9.*,<3.10"]
+# enable_resolves = true
+# default_resolve = "base"
+pip_version = "23.0.1"
+
+[python-infer]
+use_rust_parser = true
+ambiguity_resolution = "by_source_root"
+
+[python.resolves]
+pytest = "locks/tools/pytest.lock"
