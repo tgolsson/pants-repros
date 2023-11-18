@@ -7,6 +7,8 @@ import logging
 
 import torch
 
+torch.cuda.init()
+assert torch.cuda.is_initialized()
 logger = logging.getLogger(__name__)
 
 # From cuda.h
@@ -183,7 +185,9 @@ class CudaContext:
             result = ctypes.c_int()
 
             try:
-                result = self.cuda.cuMemGetInfo_v2(ctypes.byref(free), ctypes.byref(total))
+                result = self.cuda.cuMemGetInfo_v2(
+                    ctypes.byref(free), ctypes.byref(total)
+                )
             except AttributeError:
                 result = self.cuda.cuMemGetInfo(ctypes.byref(free), ctypes.byref(total))
 
@@ -230,14 +234,18 @@ class CudaContext:
         result = self.cuda.cuInit(0)
         if result != CUDA_SUCCESS:
             self.cuda.cuGetErrorString(result, ctypes.byref(error_str))
-            logging.error("cuInit failed with error code %d: %s", result, error_str.value.decode())
+            logging.error(
+                "cuInit failed with error code %d: %s", result, error_str.value.decode()
+            )
             return None
 
         result = self.cuda.cuDeviceGetCount(ctypes.byref(device_count))
         if result != CUDA_SUCCESS:
             self.cuda.cuGetErrorString(result, ctypes.byref(error_str))
             logging.error(
-                "cuDeviceGetCount failed with error code %d: %s", result, error_str.value.decode()
+                "cuDeviceGetCount failed with error code %d: %s",
+                result,
+                error_str.value.decode(),
             )
             return None
 
@@ -255,7 +263,9 @@ class CudaContext:
         if result != CUDA_SUCCESS:
             self.cuda.cuGetErrorString(result, ctypes.byref(error_str))
             logging.error(
-                "cuDeviceGet failed with error code %d: %s", result, error_str.value.decode()
+                "cuDeviceGet failed with error code %d: %s",
+                result,
+                error_str.value.decode(),
             )
             return None
 
@@ -267,7 +277,9 @@ class CudaContext:
         if result != CUDA_SUCCESS:
             self.cuda.cuGetErrorString(result, ctypes.byref(error_str))
             logging.error(
-                "cuCtxCreate failed with error code %d: %s", result, error_str.value.decode()
+                "cuCtxCreate failed with error code %d: %s",
+                result,
+                error_str.value.decode(),
             )
             return None
 
@@ -323,7 +335,9 @@ def debug_print():
         logging.error("nvidia-smi not found")
 
     try:
-        output = subprocess.check_output(["nvcc", "--version"], stderr=subprocess.STDOUT)
+        output = subprocess.check_output(
+            ["nvcc", "--version"], stderr=subprocess.STDOUT
+        )
 
         logging.info("nvcc output:")
         print(output.decode("utf-8"))
@@ -358,5 +372,6 @@ def debug_print():
         logging.error("Failed to get CUDA info: %s", e)
 
 
-print(torch.version.__version__)
-debug_print()
+if __name__ == "__main__":
+    print(torch.version.__version__)
+    debug_print()

@@ -5,6 +5,10 @@ backend_packages = [
     "pants.backend.python",
 ]
 
+[source]
+root_patterns = [
+    "cmd",
+]
 
 [python]
 interpreter_constraints = [">=3.9.*,<3.10"]
