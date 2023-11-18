@@ -44,7 +44,8 @@ Device: "NVIDIA GeForce RTX 3080"
 The same file ran as a `pex_binary` fails:
 
 ``` shellsession
-$ pants run cmd:pb
+$ # can also :packed, same result
+$ pants run cmd:loose
 Traceback (most recent call last):
   File "/home/ts/.pex/installed_wheels/0387b97fad0e6603e4d75e20bba37b1b8b37a5246b6d316feb78cf2b38a67408/torch-2.1.1-cp39-cp39-manylinux1_x86_64.whl/torch/__init__.py", line 174, in _load_global_deps
     ctypes.CDLL(lib_path, mode=ctypes.RTLD_GLOBAL)
@@ -93,3 +94,5 @@ Traceback (most recent call last):
     self._handle = _dlopen(self._name, mode)
 OSError: libnvJitLink.so.12: cannot open shared object file: No such file or directory
 ```
+
+Uncomment the `import nvidia` line in the `cuda.py` should fix both `loose` and `packed` formats

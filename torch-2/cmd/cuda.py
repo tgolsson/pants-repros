@@ -5,6 +5,8 @@ import dataclasses
 import functools
 import logging
 
+# UNCOMMENT THIS LINE TO FIX
+# import nvidia
 import torch
 
 torch.cuda.init()
