@@ -1,0 +1,18 @@
+[GLOBAL]
+pants_version = "2.26.0"
+
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.shell",
+    "pants.backend.experimental.adhoc",
+]
+
+
+[source]
+root_patterns = [
+    "/",
+    "/src/py",
+]
+
+[python]
+interpreter_constraints = [">=3.9.0"]
