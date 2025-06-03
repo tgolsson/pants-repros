@@ -10,8 +10,7 @@ backend_packages = [
 
 [source]
 root_patterns = [
-    "/",
-    "/src/py",
+    "python",
 ]
 
 [python]
